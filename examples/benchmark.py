@@ -159,6 +159,7 @@ def runOneTest(testName, options):
     else:
         context = mm.Context(system, integ, platform)
     context.setPositions(positions)
+    print('number of atoms', len(positions))
     if amber:
         if inpcrd.boxVectors is not None:
             context.setPeriodicBoxVectors(*inpcrd.boxVectors)
